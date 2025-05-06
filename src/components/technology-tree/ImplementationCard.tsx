@@ -35,8 +35,8 @@ export const ImplementationCard = ({
 
   const handleSave = () => {
     toast({
-      title: "実装を保存しました",
-      description: `${title}があなたのライブラリに保存されました`
+      title: "Implementation Saved",
+      description: `${title} has been saved to your library`
     });
   };
 
@@ -47,7 +47,7 @@ export const ImplementationCard = ({
         <Badge 
           className={cn(`ml-2 ${badgeColor} ${badgeTextColor} border-0 font-normal`)}
         >
-          {releases}リリース
+          {releases} releases
         </Badge>
       </div>
       <p className="text-gray-600 text-sm font-normal mb-3">
@@ -55,7 +55,7 @@ export const ImplementationCard = ({
       </p>
       {pressReleases.length > 0 && (
         <div className="space-y-2 mb-4">
-          <div className="text-sm font-medium text-gray-700">プレスリリース：</div>
+          <div className="text-sm font-medium text-gray-700">Press Releases:</div>
           <div className="pl-4 space-y-1.5">
             {displayedReleases.map((release, index) => (
               <a
@@ -77,12 +77,12 @@ export const ImplementationCard = ({
               {isExpanded ? (
                 <>
                   <ChevronUp className="w-4 h-4" />
-                  折りたたむ
+                  Show less
                 </>
               ) : (
                 <>
                   <ChevronDown className="w-4 h-4" />
-                  さらに{pressReleases.length - 3}件表示
+                  Show {pressReleases.length - 3} more
                 </>
               )}
             </button>
@@ -95,8 +95,9 @@ export const ImplementationCard = ({
         onClick={handleSave}
         className="w-full mt-2 text-gray-500 hover:text-gray-700"
       >
-        保存
+        Save
       </Button>
     </div>
   );
 };
+

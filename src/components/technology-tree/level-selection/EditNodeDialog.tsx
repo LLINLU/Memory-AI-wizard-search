@@ -33,14 +33,14 @@ export const EditNodeDialog: React.FC<EditNodeDialogProps> = ({
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-md">
         <DialogHeader>
-          <DialogTitle>ノードを編集</DialogTitle>
+          <DialogTitle>Edit Node</DialogTitle>
           <DialogDescription>
-            ノード情報を変更してください。
+            Make changes to the node information.
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <div className="grid gap-2">
-            <label htmlFor="title" className="text-sm font-medium">タイトル</label>
+            <label htmlFor="title" className="text-sm font-medium">Title</label>
             <input
               id="title"
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
@@ -49,7 +49,7 @@ export const EditNodeDialog: React.FC<EditNodeDialogProps> = ({
             />
           </div>
           <div className="grid gap-2">
-            <label htmlFor="description" className="text-sm font-medium">説明</label>
+            <label htmlFor="description" className="text-sm font-medium">Description</label>
             <textarea
               id="description"
               className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
@@ -59,8 +59,8 @@ export const EditNodeDialog: React.FC<EditNodeDialogProps> = ({
           </div>
         </div>
         <DialogFooter>
-          <Button variant="outline" onClick={() => onOpenChange(false)}>キャンセル</Button>
-          <Button onClick={onSave}>変更を保存</Button>
+          <Button variant="outline" onClick={() => onOpenChange(false)}>Cancel</Button>
+          <Button onClick={onSave}>Save changes</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
